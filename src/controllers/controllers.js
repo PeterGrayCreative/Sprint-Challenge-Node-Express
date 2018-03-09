@@ -12,7 +12,7 @@ router.get('/compare', (req, res) => {
     .then(priceDiff => {
       res.status(STATUS_SUCCESS);
       res.send({
-          priceDifference: priceDiff
+          priceDifference: `The difference since yesterday is: ${priceDiff}`
       });
     })
     .catch((err) => {
